@@ -1,23 +1,21 @@
 function transporMatriz(A) {
-
-    console.log("Matriz original:")
-    console.log(A)
-
-    let linhas = A.length
-    let colunas = A[0].length
-
-    let AT = []
-
-    for (let j = 0; j < colunas; j++) {
-        AT[j] = []
-
-        for (let i = 0; i < linhas; i++) {
-            AT[j][i] = A[i][j]
+    for (let i = 0; i < A.length; i++) {
+        let linha = ""
+        for (let j = 0; j < A[0].length; j++) {
+           linha += A[i][j] + "\t";
         }
+        linha += "\n"
+        console.log(linha)    // TUDO isso, é para imprimir a matriz original kkkkkk
     }
 
-    console.log("Matriz transposta:")
-    console.log(AT)
+      for (let j = 0; j < A[0].length; j++) {
+        let linha = ""
+        for (let i = 0; i < A.length; i++) {
+           linha += A[i][j] + "\t";
+        }
+        linha += "\n"
+        console.log(linha)    // TUDO isso, é para imprimir a matriz original kkkkkk
+    }
 }
 
 let A = [
@@ -26,4 +24,4 @@ let A = [
     [5,6]
 ]
 
-transporMatriz(A)
+transporMatriz(A);
