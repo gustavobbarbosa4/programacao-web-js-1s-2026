@@ -3,6 +3,7 @@ let produtos = [];
 
 function cadastrar_produto(id, nome, qtd) {
     let produto = {
+        id: id,
         nome: nome,
         qtd: qtd
     };
