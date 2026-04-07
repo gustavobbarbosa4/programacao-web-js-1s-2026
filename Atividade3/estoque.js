@@ -1,7 +1,7 @@
 // Mantém a lista de produtos em memória enquanto a aplicação estiver rodando
 let produtos = [];
 
-function cadastrar_produto(nome, qtd) {
+function cadastrar_produto(id, nome, qtd) {
     let produto = {
         nome: nome,
         qtd: qtd
@@ -12,6 +12,10 @@ function cadastrar_produto(nome, qtd) {
 function listar_produtos(){
     return produtos;
 };
+
+function remover_produtos(){
+
+}
 
 module.exports = {
     cadastrar_produto,

@@ -10,6 +10,8 @@ app.get('/', (req, res)=>{
     let msg = "<h1>Rotas disponíveis</h1>";
     msg     += "<p>Para cadastrar produtos: /api/cadastrar/:nome/:qtd</p>" 
     msg     += "<p>Para listar os produtos: /api/listar</p>" 
+    msg     += "<p>Para remover um produto: /remover/:id</p>" 
+    msg     += "<p>Para editar os produtos: /editar/:id/:qtd</p>" 
     res.send(msg)
 });
 
