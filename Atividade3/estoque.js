@@ -14,11 +14,21 @@ function listar_produtos(){
     return produtos;
 };
 
-function remover_produtos(){
+function remover_produtos(id) {
+    produtos = produtos.filter(produto => produto.id !== id);
+}
 
+function editar_produto(id, qtd) {
+    let produto = produtos.find(produto => produto.id === id);
+    if (produto) {
+        produto.qtd = qtd;
+    }
 }
 
 module.exports = {
     cadastrar_produto,
-    listar_produtos
+    listar_produtos,
+    remover_produtos,
+    editar_produto
 };
+   
